@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const corsConfig = {
-  origin: "https://boisterous-dieffenbachia-ed9c39.netlify.app",
+  origin: "https://chat-site-1-9wbq.onrender.com",
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
 };
