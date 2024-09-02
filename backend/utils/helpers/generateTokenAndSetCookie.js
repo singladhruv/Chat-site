@@ -1,32 +1,16 @@
-// import jwt from "jsonwebtoken";
-
-// const generateTokenAndSetCookie = (userId, res) => {
-//   const token = jwt.sign({ userId }, "dhurvlovesmommy", {
-//     expiresIn: "15d",
-//   });
-
-//   res.cookie("jwt", token, {
-//     httpOnly: true, // more secure
-//     maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days
-//     sameSite: "strict", // CSRF
-//   });
-
-//   return token;
-// };
-
-// export default generateTokenAndSetCookie;
-
 import jwt from "jsonwebtoken";
 
 const generateTokenAndSetCookie = (userId, res) => {
-  const token = jwt.sign({ userId }, "dhurvlovesmommy", {
-    expiresIn: "15d",
+  const token = jwt.sign({ userId }, "dhruvloveseveryone", {
+    expiresIn: "15d", // Token expiration time
   });
 
   res.cookie("jwt", token, {
-    httpOnly: true, // more secure
+    httpOnly: true,
+    sameSite: "None",
+    // Helps prevent XSS attacks
     maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days
-    sameSite: "strict", // CSRF
+    secure: true,
   });
 
   return token;
