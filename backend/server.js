@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // Configure CORS
-app.use(cors({ origin: "https://chat-app-dhruv.netlify.app", credentials: true }));
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 
 // Routes
 app.use("/api/users", userRoutes);

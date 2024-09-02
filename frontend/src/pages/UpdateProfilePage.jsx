@@ -37,7 +37,7 @@ export default function UpdateProfilePage() {
     setUpdating(true);
     try {
       const res = await fetch(
-        `https://chat-site-pfxw.onrender.com/api/users/update/${user._id}`,
+        `http://localhost:5000/api/users/update/${user._id}`,
         {
           method: "PUT",
           credentials: "include",
