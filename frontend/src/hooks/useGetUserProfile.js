@@ -12,7 +12,7 @@ const useGetUserProfile = () => {
     const getUser = async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/api/users/profile/${username}`
+          `https://chat-site-pti3.onrender.com/api/users/profile/${username}`
         );
         const data = await res.json();
         if (data.error) {

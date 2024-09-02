@@ -102,7 +102,7 @@ const MessageContainer = () => {
       try {
         if (selectedConversation.mock) return;
         const res = await fetch(
-          `http://localhost:5000/api/messages/${selectedConversation.userId}`,
+          `https://chat-site-pti3.onrender.com/api/messages/${selectedConversation.userId}`,
           {
             credentials: "include",
           }

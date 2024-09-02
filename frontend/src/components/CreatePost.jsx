@@ -57,19 +57,22 @@ const CreatePost = () => {
   const handleCreatePost = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/posts/create", {
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-          // Authorization: `Bearer ${document.cookie.split("=")[1]}`, // Include JWT token in the headers
-        },
-        body: JSON.stringify({
-          postedBy: user._id,
-          text: postText,
-          img: imgUrl,
-        }),
-      });
+      const res = await fetch(
+        "https://chat-site-pti3.onrender.com/api/posts/create",
+        {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+            // Authorization: `Bearer ${document.cookie.split("=")[1]}`, // Include JWT token in the headers
+          },
+          body: JSON.stringify({
+            postedBy: user._id,
+            text: postText,
+            img: imgUrl,
+          }),
+        }
+      );
 
       const data = await res.json();
       if (data.error) {

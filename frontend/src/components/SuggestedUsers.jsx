@@ -12,10 +12,13 @@ const SuggestedUsers = () => {
     const getSuggestedUsers = async () => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:5000/api/users/suggested", {
-          method: "GET",
-          credentials: "include", // Include cookies in the request
-        });
+        const res = await fetch(
+          "https://chat-site-pti3.onrender.com/api/users/suggested",
+          {
+            method: "GET",
+            credentials: "include", // Include cookies in the request
+          }
+        );
         const data = await res.json();
         if (data.error) {
           showToast("Error", data.error, "error");
