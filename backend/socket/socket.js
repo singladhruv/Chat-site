@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-app-dhruv.netlify.app",
+    origin: "https://fabulous-gnome-4df562.netlify.app",
     methods: ["GET", "POST"],
   },
 });
