@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://boisterous-dieffenbachia-ed9c39.netlify.app",
+    origin: "https://chat-site-1-9wbq.onrender.com",
     methods: ["GET", "POST"],
   },
 });
